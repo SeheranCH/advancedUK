@@ -1,4 +1,4 @@
-package ch.course223.advanced.UK.domainModells.Sum;
+package ch.course223.advanced.UK.domainModells.sum;
 
 import org.springframework.stereotype.Service;
 
