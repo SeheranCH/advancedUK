@@ -53,6 +53,21 @@ public class UserController {
         return new ResponseEntity<>(userService.allUsersEarningBetween(x, y), HttpStatus.OK);
     }
 
+    @GetMapping("/salary/average/under")
+    public @ResponseBody ResponseEntity<List<User>> getAllSalariesUnderAverage() {
+        return new ResponseEntity<>(userService.allUsersUnderAverage(), HttpStatus.OK);
+    }
+
+    @GetMapping("/salary/average/over")
+    public @ResponseBody ResponseEntity<List<User>> getAllSalariesOverAverage() {
+        return new ResponseEntity<>(userService.allUsersOverAverage(), HttpStatus.OK);
+    }
+
+    @GetMapping("/salary/average")
+    public @ResponseBody ResponseEntity<Double> getAverage() {
+        return new ResponseEntity<>(userService.getAverageSalary(), HttpStatus.OK);
+    }
+
     @PostMapping("")
     public @ResponseBody ResponseEntity<User> createNewUser(@PathVariable User user) {
         return new ResponseEntity<>(userService.createUser(user), HttpStatus.CREATED);

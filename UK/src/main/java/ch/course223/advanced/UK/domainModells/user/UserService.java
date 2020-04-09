@@ -13,5 +13,8 @@ public interface UserService {
     List<User> allUsersEarningMoreThan(double x);
     List<User> allUsersEarningLessThan(double x);
     List<User> allUsersEarningBetween(double x, double y);
+    double getAverageSalary();
+    List<User> allUsersUnderAverage();
+    List<User> allUsersOverAverage();
     User createUser (User user);
 }
